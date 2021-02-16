@@ -1,1 +1,64 @@
 @import "reset";
+@import "fonts";
+
+body {
+    color: #2F3035;
+    font-family: 'SFProDisplay-Regular', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+a {
+    color: inherit;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 122px;
+        font-family: 'SFProDisplay-Bold', sans-serif;
+        font-weight: 700;
+        .menu {
+            &__item {
+                display: inline-block;
+            }            
+        }
+        .menu__item + .menu__item {
+            padding-left: 50px;
+        }
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+    &__adress {
+        margin-right: 60px;
+        width: 265px;
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../img/icons/geo.svg');
+            width: 30px;
+            height: 30px;
+            left: 0;
+            top: -10px;
+        }
+    }
+    .user-list {
+        padding-right: 15px;
+        &__item {
+            display: inline-block;
+            padding-right: 10px;
+        }
+    }
+    
+}
